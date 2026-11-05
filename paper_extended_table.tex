@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Implementation \& Efficiency Metrics on Kintex UltraScale+ (xcku5p)}
+\label{tab:ppa_extended}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lcccccccccc@{}}
+\toprule
+\textbf{Architecture} & \textbf{LUTs} & \textbf{FFs} & \textbf{BRAM / DSP} & \textbf{$F_{max}$ (MHz)} & \textbf{Latency (Cycles)} & \textbf{Power (mW)} & \textbf{T-put (Mbps)} & \textbf{Efficiency (Mbps/LUT)}$^{\mathrm{a}}$ & \textbf{Energy (pJ/bit)}$^{\mathrm{b}}$ \\ \midrule
+Unprotected Baseline & 482 & 536 & 1 / 0 & 250.0 & 10 & 9.4 & 1148 & 2.382 & 8.19 \\
+Branch 1: Masked+DMR & 1942 & 1896 & 1 / 0 & 125.0 & 15 & 18.0 & 574 & 0.296 & 31.36 \\
+Branch 2: Hiding+DMR & 1205 & 1102 & 1 / 0 & 140.0 & 12 & 14.2 & 574 & 0.476 & 24.74 \\
+Branch 3: Morphing+DMR & 1110 & 1054 & 1 / 0 & 135.0 & 18 & 13.5 & 574 & 0.517 & 23.52 \\
+\bottomrule
+\multicolumn{10}{l}{\rule{0pt}{1.2em}$^{\mathrm{a}}$ \textit{Hardware Efficiency (Mbps/LUT)} = $\frac{\text{Throughput (Mbps)}}{\text{Total LUTs}}$} \\
+\multicolumn{10}{l}{\rule{0pt}{1em}$^{\mathrm{b}}$ \textit{Energy Efficiency (pJ/bit)} = $\frac{\text{Dynamic Power (mW)}}{\text{Throughput (Mbps)}} \times 10^3$} \\
+\end{tabular}%
+}
+\end{table*}

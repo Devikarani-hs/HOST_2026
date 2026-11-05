@@ -1,0 +1,13 @@
+# Simulation & Trace Data
+*.vcd
+*.saif
+*.npy
+*.wdb
+xsim.dir/
+.Xil/
+
+# Vivado Checkpoints and Logs
+*.dcp
+*.jou
+*.log
+*.pb

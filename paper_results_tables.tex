@@ -1,0 +1,33 @@
+\begin{table}[h]
+\centering
+\caption{Implementation Results on Kintex UltraScale+ (xcku5p)}
+\label{tab:ppa_results}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Architecture} & \textbf{LUTs} & \textbf{FFs} & \textbf{BRAM} & \textbf{Power (mW)} & \textbf{Throughput (Mbps)} \\ \midrule
+Unprotected Baseline & 482 & 536 & 1 & 9.4 & 1148 \\
+Branch 1: Masked+DMR & 1942 & 1896 & 1 & 18.0 & 574 \\
+Branch 2: Hiding+DMR & 1205 & 1102 & 1 & 14.2 & 574 \\
+Branch 3: Morphing+DMR & 1110 & 1054 & 1 & 13.5 & 574 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Pre-Silicon TVLA Security Evaluation (Maximum $|t|$-value)}
+\label{tab:tvla_results}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Architecture Design} & \textbf{N = 10,000} & \textbf{N = 100,000} & \textbf{Security Status (100k)} \\ \midrule
+1. Unprotected Baseline & 19.09 (FAIL) & 60.37 & FAILED \\
+2. Branch 1: Masked+DMR & 3.85 (PASS) & 12.17 & FAILED (Glitch) \\
+3. Branch 2: Hiding+DMR & 18.02 (FAIL) & 56.98 & FAILED (Routing) \\
+4. Branch 3: Morphing+DMR & 14.7 (FAIL) & 46.49 & FAILED (Clock Tree) \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
